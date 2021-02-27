@@ -51,6 +51,15 @@ namespace teachingPlatform
         protected global::System.Web.UI.WebControls.TextBox txt_repassword;
 
         /// <summary>
+        /// passwordValid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator passwordValid;
+
+        /// <summary>
         /// btn_register control.
         /// </summary>
         /// <remarks>
@@ -76,5 +85,14 @@ namespace teachingPlatform
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ValidationSummary errors;
+
+        /// <summary>
+        /// error control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label error;
     }
 }

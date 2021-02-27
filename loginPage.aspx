@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="loginPage.aspx.cs" Inherits="teachingPlatform.loginPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master"
+    AutoEventWireup="true" CodeBehind="loginPage.aspx.cs" Inherits="teachingPlatform.loginPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -80,6 +81,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
         <div class="auto-style1">
+            
             <center>
                 <h1></h1>
                 <h1>Student Login</h1>
@@ -87,14 +89,27 @@
             <label for="uname"><b>Username</b></label>
             <asp:TextBox runat="server" ID="txt_Username"
                 placeholder="Enter Username"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="username" ControlToValidate="txt_Username"
+                Display="None" ErrorMessage="Please enter the username."></asp:RequiredFieldValidator>
+            
             <label for="psw"><b>Password</b></label>
             <asp:TextBox runat="server" ID="txt_password" TextMode="Password"
                 placeholder="Enter Password"></asp:TextBox>
-            <asp:Button runat="server" ID="btn_Login" CssClass="lgnbtn" Text="Login" /><br />
+            <asp:RequiredFieldValidator ID="password" ErrorMessage="Please enter the password"
+                 Display="None" ControlToValidate="txt_password"></asp:RequiredFieldValidator>
+
+            <asp:Button runat="server" ID="btn_Login" CssClass="lgnbtn" Text="Login"
+                 OnClick="btn_Login_Click"/><br />
             <asp:HyperLink ID="registerHere" runat="server" NavigateUrl="~/registrationPage.aspx"
                  Text="Register Here" 
                 ForeColor="#800000" Font-Bold="true" Font-Italic="true">
             </asp:HyperLink>
+            </br></br>
+            <center>
+                <asp:Label ID="WrongCredentials" Font-Bold="true" ForeColor="#ff0000" runat="server" Text=""></asp:Label>
+
+            </center>
+            
         </div>
     
 
