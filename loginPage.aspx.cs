@@ -25,19 +25,24 @@ namespace teachingPlatform
                 SqlConnection con = new SqlConnection(connstr);
                 string cmdStr = "select * from Registered where Email=@Email";
                 SqlCommand cmd = new SqlCommand(cmdStr, con);
-                cmd.Parameters.AddWithValue("Email", txt_Username);
+                cmd.Parameters.AddWithValue("@Email", txt_Username.Text);
                 SqlDataReader reader;
                 try
                 {
                     con.Open();
                     reader = cmd.ExecuteReader();
                     reader.Read();
-                    if (reader["Password"] != txt_password)
+                    if (reader["Password"].ToString() != txt_password.Text)
                     {
                         WrongCredentials.Text = "Incorrect Password.";
                     }
                     else
+                    {
+                        Session["Name"]=reader["FullName"].ToString();
+                        System.Web.Security.FormsAuthentication.SetAuthCookie(reader["Email"].ToString(), true);
                         Response.Redirect("StudentHomePage.aspx");
+                    }
+                        
                 }
                 catch
                 {
@@ -45,7 +50,7 @@ namespace teachingPlatform
                 }
                 finally
                 {
-
+                    con.Close();
                 }
             }
         }

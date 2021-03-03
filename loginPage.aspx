@@ -70,47 +70,47 @@
         }
         .auto-style1 {
             padding: 16px;
-            width: 375px;
+            width: 400px;
             height: 140px;
             position: absolute;
-            left: 493px;
+            left: 350px;
             top: 85px;
         }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
         <div class="auto-style1">
             
             <center>
-                <h1></h1>
+                
                 <h1>Student Login</h1>
             </center>
             <label for="uname"><b>Username</b></label>
             <asp:TextBox runat="server" ID="txt_Username"
                 placeholder="Enter Username"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="username" ControlToValidate="txt_Username"
+            <asp:RequiredFieldValidator ID="username" ControlToValidate="txt_Username" runat="server"
                 Display="None" ErrorMessage="Please enter the username."></asp:RequiredFieldValidator>
             
             <label for="psw"><b>Password</b></label>
             <asp:TextBox runat="server" ID="txt_password" TextMode="Password"
                 placeholder="Enter Password"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="password" ErrorMessage="Please enter the password"
+            <asp:RequiredFieldValidator ID="password" ErrorMessage="Please enter the password" runat="server"
                  Display="None" ControlToValidate="txt_password"></asp:RequiredFieldValidator>
 
             <asp:Button runat="server" ID="btn_Login" CssClass="lgnbtn" Text="Login"
                  OnClick="btn_Login_Click"/><br />
             <asp:HyperLink ID="registerHere" runat="server" NavigateUrl="~/registrationPage.aspx"
                  Text="Register Here" 
-                ForeColor="#800000" Font-Bold="true" Font-Italic="true">
+                ForeColor="#000066" Font-Bold="true" Font-Italic="true" Font-Size="Large">
             </asp:HyperLink>
             </br></br>
             <center>
-                <asp:Label ID="WrongCredentials" Font-Bold="true" ForeColor="#ff0000" runat="server" Text=""></asp:Label>
+                <asp:Label ID="WrongCredentials" Font-Bold="true" ForeColor="#000066" runat="server" Text=""></asp:Label>
 
             </center>
             
         </div>
-    
+    <asp:ValidationSummary ShowMessageBox="true" ShowSummary="false" ID="errorsummary" runat="server" />
 
 </asp:Content>
