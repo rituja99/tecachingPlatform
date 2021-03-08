@@ -1,0 +1,71 @@
+﻿.header {
+    overflow: hidden;
+    background-color: white;
+    padding: 20px 10px;
+    height: 100%;
+    align-content: center;
+    vertical-align: central;
+}
+
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header-right {
+    float: right;
+    padding: 20px 10px;
+    height: 100%;
+    align-content: center;
+    vertical-align: central;
+    text-align: center;
+}
+
+    .header-right .sign-in {
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+        display: inline-block;
+        font-size: 15px;
+        border-radius: 10px;
+        background-color: white;
+        color: #1A6BE4;
+        vertical-align: central;
+        border: 1px solid transparent;
+    }
+
+        .header-right .sign-in:hover {
+            border: 1px solid #1A6BE4;
+            color: #004FE2;
+        }
+
+    .header-right .sign-up {
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+        display: inline-block;
+        font-size: 15px;
+        border-radius: 10px;
+        background-color: #1A6BE4;
+        color: white;
+        vertical-align: central;
+    }
+
+        .header-right .sign-up:hover {
+            color: ghostwhite;
+            background-color: #004FC2;
+        }
+
+
+

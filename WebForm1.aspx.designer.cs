@@ -11,52 +11,52 @@ namespace teachingPlatform
 {
 
 
-    public partial class Site1
+    public partial class WebForm1
     {
 
         /// <summary>
-        /// head control.
+        /// txt_Username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.TextBox txt_Username;
 
         /// <summary>
-        /// form1 control.
+        /// txt_password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox txt_password;
 
         /// <summary>
-        /// navbarPanel control.
+        /// btn_Login control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel navbarPanel;
+        protected global::System.Web.UI.WebControls.Button btn_Login;
 
         /// <summary>
-        /// logoImage control.
+        /// registerHere control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image logoImage;
+        protected global::System.Web.UI.WebControls.HyperLink registerHere;
 
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// WrongCredentials control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Label WrongCredentials;
     }
 }

@@ -11,52 +11,52 @@ namespace teachingPlatform
 {
 
 
-    public partial class loginPage
+    public partial class LandingPage
     {
 
         /// <summary>
-        /// txt_Username control.
+        /// Panel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_Username;
+        protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
-        /// txt_password control.
+        /// logoImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_password;
+        protected global::System.Web.UI.WebControls.Image logoImage;
 
         /// <summary>
-        /// btn_Login control.
+        /// signInButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Login;
+        protected global::System.Web.UI.WebControls.Button signInButton;
 
         /// <summary>
-        /// registerHere control.
+        /// signUpButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink registerHere;
+        protected global::System.Web.UI.WebControls.Button signUpButton;
 
         /// <summary>
-        /// WrongCredentials control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label WrongCredentials;
+        protected global::System.Web.UI.WebControls.Image Image1;
     }
 }
