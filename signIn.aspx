@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master"
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master"
     AutoEventWireup="true" CodeBehind="signIn.aspx.cs" Inherits="teachingPlatform.loginPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">

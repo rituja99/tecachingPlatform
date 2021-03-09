@@ -7,12 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace teachingPlatform
 {
-    public partial class LandingPage : System.Web.UI.Page
+    public partial class Site2 : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Panel navPanel = (Panel)Master.FindControl("navbarPanel");
-            //navPanel.Visible = false;
+
         }
     }
 }
