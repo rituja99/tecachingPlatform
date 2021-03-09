@@ -72,8 +72,8 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h3>Let's Start!</h3>
-    <div class="auto-style11" style="background-color:powderblue">
+    <%-- <h3>Let's Start!</h3>
+   <div class="auto-style11" style="background-color:powderblue">
   <div class="auto-style5">
      <table>
          <tr>
@@ -122,5 +122,6 @@
      </table> 
       
   </div>
-</div>
+</div>--%>
+
 </asp:Content>

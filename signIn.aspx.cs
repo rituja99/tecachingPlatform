@@ -12,7 +12,6 @@ namespace teachingPlatform
     public partial class loginPage : System.Web.UI.Page
     {
         string connstr = WebConfigurationManager.ConnectionStrings["StudentsDB"].ConnectionString;
-        
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -20,24 +19,25 @@ namespace teachingPlatform
 
         protected void studentSignIn_Click(object sender, EventArgs e)
         {
-            if (IsValid)
-            {
                 SqlConnection con = new SqlConnection(connstr);
                 string cmdStr = "select * from Registered where Email=@Email";
                 SqlCommand cmd = new SqlCommand(cmdStr, con);
-                cmd.Parameters.AddWithValue("Email", emailIDTextBoxStudent);
-                SqlDataReader reader;
+                cmd.Parameters.AddWithValue("@Email", emailIDTextBoxStudent.Text);
+                SqlDataReader reader = null;
                 try
                 {
                     con.Open();
                     reader = cmd.ExecuteReader();
                     reader.Read();
-                    if (reader["Password"] != passwordTextBoxStudent)
+                    if (reader["Password"].ToString() != passwordTextBoxStudent.Text)
                     {
                         WrongCredentialsStudent.Text = "Incorrect Password.";
                     }
                     else
+                    {
+                        Session["Name"] = reader["FullName"].ToString();
                         Response.Redirect("StudentHomePage.aspx");
+                    }
                 }
                 catch
                 {
@@ -45,30 +45,25 @@ namespace teachingPlatform
                 }
                 finally
                 {
-
+                    reader.Close();
+                    con.Close();
                 }
-            }
-            else
-            {
-                WrongCredentialsStudent.Text = "Incorrect UserName.";
-            }
+            
         }
 
         protected void teacherSignIn_Click(object sender, EventArgs e)
         {
-            if (IsValid)
-            {
                 SqlConnection con = new SqlConnection(connstr);
                 string cmdStr = "select * from Registered where Email=@Email";
                 SqlCommand cmd = new SqlCommand(cmdStr, con);
-                cmd.Parameters.AddWithValue("Email", emailIDTextBoxTeacher);
+                cmd.Parameters.AddWithValue("@Email", emailIDTextBoxTeacher.Text);
                 SqlDataReader reader;
                 try
                 {
                     con.Open();
                     reader = cmd.ExecuteReader();
                     reader.Read();
-                    if (reader["Password"] != passwordTextBoxTeacher)
+                    if (reader["Password"].ToString() != passwordTextBoxTeacher.Text)
                     {
                         WrongCredentialsTeacher.Text = "Incorrect Password.";
                     }
@@ -81,9 +76,9 @@ namespace teachingPlatform
                 }
                 finally
                 {
-
+                    con.Close();
                 }
-            }
+            
         }
     }
 }

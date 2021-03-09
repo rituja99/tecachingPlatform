@@ -11,7 +11,7 @@ namespace teachingPlatform
 {
 
 
-    public partial class TeacherHomePage
+    public partial class discussionForum
     {
     }
 }

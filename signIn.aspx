@@ -9,27 +9,37 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <form></form>
         <div class="container login-container" style="padding-top: 0px">
             <div class="row" style="text-align:center">
                 <div class="col-md-6 login-form-1">
                     <h3>Sign In as Student</h3>
                     <form id="form2">
                         <div class="form-group">
-                            <asp:TextBox ID="emailIDTextBoxStudent" runat="server" CssClass="form-control" placeholder="Email ID"></asp:TextBox>
+                            <asp:ScriptManager runat="server" />
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            <ContentTemplate>
+                                <asp:TextBox ID="emailIDTextBoxStudent" runat="server"
+                                CssClass="form-control" placeholder="Email ID"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="passwordTextBoxStudent" runat="server" CssClass="form-control" placeholder="Password" TextMode="Password"></asp:TextBox>
+                            <asp:TextBox ID="passwordTextBoxStudent" runat="server" 
+                                CssClass="form-control" placeholder="Password" 
+                                TextMode="Password"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <asp:Button ID="signInButtonStudent" runat="server" Text="Sign In" CssClass="btnSubmit" OnClick="studentSignIn_Click" />
+                            <asp:Button ID="signInButtonStudent" runat="server"
+                                Text="Sign In" CssClass="btnSubmit" OnClick="studentSignIn_Click" />
                         </div>
                         <div class="form-group">
                             <a href="#" class="ForgetPwd">Forgot Password?</a>
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="WrongCredentialsStudent" runat="server" Text="" ForeColor="#1A6BE4"></asp:Label>
+                            <asp:Label ID="WrongCredentialsStudent" runat="server" Text=""
+                                ForeColor="#1A6BE4"></asp:Label>
+                           
                         </div>
+                                 </ContentTemplate>
+                            </asp:UpdatePanel>
                     </form>
                 </div>
                 
@@ -37,6 +47,8 @@
                     <h3>Sign In as Teacher</h3>
                     <form id="form3">
                         <div class="form-group">
+                            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                            <ContentTemplate>
                             <asp:TextBox ID="emailIDTextBoxTeacher" runat="server" CssClass="form-control" placeholder="Email ID"></asp:TextBox>
                         </div>
                         <div class="form-group">
@@ -51,6 +63,8 @@
                         <div class="form-group">
                             <asp:Label ID="WrongCredentialsTeacher" runat="server" Text="" ForeColor="White"></asp:Label>
                         </div>
+                                 </ContentTemplate>
+                            </asp:UpdatePanel>
                     </form>
                 </div>
 

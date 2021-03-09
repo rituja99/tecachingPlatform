@@ -69,26 +69,74 @@
   <ItemGroup>
     <Content Include="App_Themes\Header\header.css" />
     <Content Include="App_Themes\Login\login.css" />
+    <Content Include="chapterWise.aspx" />
+    <Content Include="discussionForum.aspx" />
+    <Content Include="english.png" />
+    <Content Include="englishPage.aspx" />
+    <Content Include="german.png" />
+    <Content Include="germanPage.aspx" />
     <Content Include="Images\study.png" />
     <Content Include="Images\sign up girl.png" />
     <Content Include="Images\Logo 2.png" />
     <Content Include="LandingPage.aspx" />
+    <Content Include="practiceTests.aspx" />
+    <Content Include="referenceTB.aspx" />
     <Content Include="signIn.aspx" />
     <Content Include="pic.jpg" />
-    <Content Include="registrationPage.aspx" />
     <Content Include="signUp.aspx" />
     <Content Include="StudentHomePage.aspx" />
-    <Content Include="TeacherHomePage.aspx" />
+    <Content Include="studyMaterials.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="chapterWise.aspx.cs">
+      <DependentUpon>chapterWise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chapterWise.aspx.designer.cs">
+      <DependentUpon>chapterWise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="discussionForum.aspx.cs">
+      <DependentUpon>discussionForum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="discussionForum.aspx.designer.cs">
+      <DependentUpon>discussionForum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="englishPage.aspx.cs">
+      <DependentUpon>englishPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="englishPage.aspx.designer.cs">
+      <DependentUpon>englishPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="germanPage.aspx.cs">
+      <DependentUpon>germanPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="germanPage.aspx.designer.cs">
+      <DependentUpon>germanPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LandingPage.aspx.cs">
       <DependentUpon>LandingPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="LandingPage.aspx.designer.cs">
       <DependentUpon>LandingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="practiceTests.aspx.cs">
+      <DependentUpon>practiceTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="practiceTests.aspx.designer.cs">
+      <DependentUpon>practiceTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="referenceTB.aspx.cs">
+      <DependentUpon>referenceTB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="referenceTB.aspx.designer.cs">
+      <DependentUpon>referenceTB.aspx</DependentUpon>
     </Compile>
     <Compile Include="signIn.aspx.cs">
       <DependentUpon>signIn.aspx</DependentUpon>
@@ -98,13 +146,6 @@
       <DependentUpon>signIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="registrationPage.aspx.cs">
-      <DependentUpon>registrationPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="registrationPage.aspx.designer.cs">
-      <DependentUpon>registrationPage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="signUp.aspx.cs">
       <DependentUpon>signUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,6 +167,13 @@
     <Compile Include="Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
     </Compile>
+    <Compile Include="Site3.Master.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site3.Master.designer.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+    </Compile>
     <Compile Include="StudentHomePage.aspx.cs">
       <DependentUpon>StudentHomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -133,25 +181,21 @@
     <Compile Include="StudentHomePage.aspx.designer.cs">
       <DependentUpon>StudentHomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TeacherHomePage.aspx.cs">
-      <DependentUpon>TeacherHomePage.aspx</DependentUpon>
+    <Compile Include="studyMaterials.aspx.cs">
+      <DependentUpon>studyMaterials.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TeacherHomePage.aspx.designer.cs">
-      <DependentUpon>TeacherHomePage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="studyMaterials.aspx.designer.cs">
+      <DependentUpon>studyMaterials.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <Content Include="Site2.Master" />
+    <Content Include="Synonyms_Antonyms.pdf" />
+    <Content Include="Verbs.pdf" />
+    <Content Include="Site3.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

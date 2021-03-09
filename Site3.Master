@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="teachingPlatform.Site2" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site3.master.cs" Inherits="teachingPlatform.Site3" %>
 
 <!DOCTYPE html>
 
@@ -20,12 +20,11 @@
                 <asp:Image ID="logoImage" runat="server" CssClass="navbar-brand" ImageUrl="~/Images/Logo 2.png" Width="50%" Height="50%" style="border-style: none;" />
             </a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="signInButton" runat="server" CssClass="btn btn-outline-primary" CausesValidation="false"
-                    PostBackUrl="~/signIn.aspx" style="border-radius:10px; position:absolute; right: 110px;" Text="Sign In" />
-                &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="signUpButton" runat="server" Text="Sign Up" CausesValidation="false"
-                CssClass="btn btn-primary" style="float: right; border-radius:10px; 
-position:absolute; right: 20px;" PostBackUrl="~/signUp.aspx"/>
+                <asp:Button ID="signOutButton" runat="server" CssClass="btn btn-outline-primary"
+                    CausesValidation="false"
+                    PostBackUrl="~/LandingPage.aspx" style="border-radius:10px;
+position:absolute; right: 110px;" Text="Sign Out" />
+    
             </div>
         </nav>
     </asp:Panel>
@@ -36,3 +35,4 @@ position:absolute; right: 20px;" PostBackUrl="~/signUp.aspx"/>
     </form>
 </body>
 </html>
+
