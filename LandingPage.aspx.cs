@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace teachingPlatform
+{
+    public partial class LandingPage : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Panel navPanel = (Panel)Master.FindControl("navbarPanel");
+            navPanel.Visible = false;
+        }
+    }
+}

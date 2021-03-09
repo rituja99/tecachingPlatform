@@ -3,19 +3,56 @@
 <!DOCTYPE html>
 
 <html>
+
 <head runat="server">
-    <title></title>
+    <title>Foreign Language Teaching Platform</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
+
 <body>
     <form id="form1" runat="server">
-        <div style="background-repeat: no-repeat;
-background-attachment: fixed; background-position: center center; position: absolute;
-width: 100%; height: 100%; background-size:cover; background-image: url('/pic.jpg');">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+        <asp:Panel ID="navbarPanel" runat="server">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white" style="padding:0px;">
+                <div class="container-fluid ">
+                    <a class="navbar-brand" href="#" style="vertical-align:central; align-content: start; text-align: left; width=100%">
+                        <asp:Image ID="logoImage" runat="server" CssClass="navbar-brand" ImageUrl="~/Images/Logo 2.png" Width="50%" Height="50%" style="border-style: none;" />
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="d-flex justify-content-end collapse navbar-collapse" id="navbarTogglerDemo02" style="float:right">
+                        <ul class="d-flex justify-content-end navbar-nav">
+                            <li class="nav-item ">
+                              <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link active" href="#" aria-current="page">Resources</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link active" href="#" aria-current="page">Test</a>
+                            </li>
+                        </ul>
+                    </div>
+                 
+                    <%--<div class="collapse navbar-collapse">
+                      <form class="d-flex" style="position: absolute; right:10px;">
+                        <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search" style="float:right; width: 200px; text-align:center;">
+                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                      </form>
+                    </div>--%>
+              </div>
+            </nav>
+        </asp:Panel>
+       
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
         </div>
     </form>
 </body>
+
 </html>

@@ -9,10 +9,10 @@ using System.Data.SqlClient;
 
 namespace teachingPlatform
 {
-    public partial class loginPage : System.Web.UI.Page
+    public partial class WebForm1 : System.Web.UI.Page
     {
         string connstr = WebConfigurationManager.ConnectionStrings["StudentsDB"].ConnectionString;
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -20,7 +20,7 @@ namespace teachingPlatform
 
         protected void btn_Login_Click(object sender, EventArgs e)
         {
-            if(IsValid)
+            if (IsValid)
             {
                 SqlConnection con = new SqlConnection(connstr);
                 string cmdStr = "select * from Registered where Email=@Email";
