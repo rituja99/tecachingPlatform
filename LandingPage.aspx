@@ -24,7 +24,7 @@
     </asp:Panel>
 
     <div>
-        <div class="text-white" style="height:400px; background-image: linear-gradient(to right top, #1a6be4, #2870e9, #3274ee, #3c79f3, #447ef8, #4b89fb, #5493fd, #5e9dff, #71aeff, #87beff, #9fcdff, #b9dcff);">
+        <div class="text-white" style="height:400px; background-image: linear-gradient(to bottom, #1a6be4, #2870e9, #3274ee, #3c79f3, #447ef8, #4b89fb, #5493fd, #5e9dff, #71aeff, #87beff, #9fcdff, #b9dcff); box-shadow: 0px 0px 40px 40px #B6DCFF">
             <div style="float:left">
                     <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/study.png" Height="60%" Width="60%" />
             </div>

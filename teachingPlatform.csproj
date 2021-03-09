@@ -77,6 +77,8 @@
     <Content Include="pic.jpg" />
     <Content Include="registrationPage.aspx" />
     <Content Include="signUp.aspx" />
+    <Content Include="StudentHomePage.aspx" />
+    <Content Include="TeacherHomePage.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -116,6 +118,20 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StudentHomePage.aspx.cs">
+      <DependentUpon>StudentHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentHomePage.aspx.designer.cs">
+      <DependentUpon>StudentHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherHomePage.aspx.cs">
+      <DependentUpon>TeacherHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherHomePage.aspx.designer.cs">
+      <DependentUpon>TeacherHomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

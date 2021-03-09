@@ -48,6 +48,10 @@ namespace teachingPlatform
 
                 }
             }
+            else
+            {
+                WrongCredentialsStudent.Text = "Incorrect UserName.";
+            }
         }
 
         protected void teacherSignIn_Click(object sender, EventArgs e)

@@ -28,7 +28,7 @@
                             <a href="#" class="ForgetPwd">Forgot Password?</a>
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="WrongCredentialsStudent" runat="server" Text=""></asp:Label>
+                            <asp:Label ID="WrongCredentialsStudent" runat="server" Text="" ForeColor="#1A6BE4"></asp:Label>
                         </div>
                     </form>
                 </div>
@@ -49,14 +49,14 @@
                             <a href="#" class="ForgetPwd" value="Login">Forgot Password?</a>
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="WrongCredentialsTeacher" runat="server" Text=""></asp:Label>
+                            <asp:Label ID="WrongCredentialsTeacher" runat="server" Text="" ForeColor="White"></asp:Label>
                         </div>
                     </form>
                 </div>
 
                 <div>
-                    <br /><br />
-                    <a href="#" class="ForgetPwd">Dont have an account? Sign Up</a>
+                    <br />
+                    <a href="signUp.aspx" class="ForgetPwd">Dont have an account? Sign Up</a>
                 </div>
             </div>
         </div>
