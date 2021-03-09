@@ -24,6 +24,15 @@ namespace teachingPlatform
         protected global::System.Web.UI.WebControls.TextBox txt_Username;
 
         /// <summary>
+        /// username control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator username;
+
+        /// <summary>
         /// txt_password control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace teachingPlatform
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_password;
+
+        /// <summary>
+        /// password control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator password;
 
         /// <summary>
         /// btn_Login control.
@@ -58,5 +76,14 @@ namespace teachingPlatform
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label WrongCredentials;
+
+        /// <summary>
+        /// errorsummary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary errorsummary;
     }
 }

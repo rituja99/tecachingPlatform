@@ -14,14 +14,7 @@ namespace teachingPlatform
         string connstr = WebConfigurationManager.ConnectionStrings["StudentsDB"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-           if(!IsPostBack)
-            {
-				if(Application["SIdCount"] == null)
-                {
-					Application["SIdCount"] = 0;
-
-				}
-            }
+          
         }
 
         protected void btn_register_Click(object sender, EventArgs e)
@@ -29,43 +22,42 @@ namespace teachingPlatform
             if(IsValid)
             {
                 SqlConnection con = new SqlConnection(connstr);
-                int id = 100 + (int)Application["SIdCount"];
-                string sid = "S" + id.ToString();
-                string cmdStr = "Insert into Registered (Id, FullName, Email, Password)" +
-                    "Values(@Id, @FullName, @Email, @Password)";
-                SqlCommand cmd = new SqlCommand(cmdStr, con);
-                cmd.Parameters.AddWithValue("@Id", sid);
-                cmd.Parameters.AddWithValue("@FullName", txt_fullname.Text);
-                cmd.Parameters.AddWithValue("@Email", txt_emailid.Text);
-                cmd.Parameters.AddWithValue("@Password", txt_password.Text);
-
-                try
+				string cmdStr = "select COUNT(*) as count from Registered";
+				SqlCommand cmd = new SqlCommand(cmdStr, con);
+				SqlDataReader reader;
+				try
                 {
                     con.Open();
-                    cmd.ExecuteNonQuery().ToString();
-					Application["SIdCount"] = (int)Application["SIdCount"] + 1;
-                }
+					reader = cmd.ExecuteReader();
+					reader.Read();
+					string sid = "S"+(int.Parse(reader["count"].ToString()) + 100).ToString();
+					reader.Close();
+					cmd.CommandText = "Insert into Registered (Id, FullName, Email, Password)" +
+				   "Values(@Id, @FullName, @Email, @Password)";
+					cmd.Parameters.AddWithValue("@Id", sid);
+					cmd.Parameters.AddWithValue("@FullName", txt_fullname.Text);
+					cmd.Parameters.AddWithValue("@Email", txt_emailid.Text);
+					cmd.Parameters.AddWithValue("@Password", txt_password.Text);
+					cmd.ExecuteNonQuery().ToString();
+					Session["Name"]=txt_fullname;
+
+				}
                 catch(Exception ex)
                 {
                     error.Text = ex.Message;
                 }
                 finally
                 {
-
-                }
-            }
+					con.Close();
+					Response.Redirect("StudentHomePage.aspx");
+				}
+			}
         }
 
         protected void btn_cancel_Click(object sender, EventArgs e)
         {
             
         }
-
-        protected void Unnamed_ServerValidate(object source, ServerValidateEventArgs args)
-        {
-
-        }
-
         protected void passwordValid_ServerValidate(object source, ServerValidateEventArgs args)
         {
 			if (!((txt_password.Text.Length >= 6)
