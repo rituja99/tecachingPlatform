@@ -15,163 +15,51 @@ namespace teachingPlatform
 		protected void Page_Load(object sender, EventArgs e)
 		{
 		}
-
-		protected void passwordValid_ServerValidate(object source, ServerValidateEventArgs args)
-		{
-			if (!((txt_password.Text.Length >= 6)
-			&& (txt_password.Text.Length <= 15)))
-			{
-				args.IsValid = false;
-				passwordValid.ErrorMessage = "Password length should range between 6 and 15 and should contain alphabets,\n digits, captital letters and special characers.";
-				return;
-			}
-
-			// to check space 
-			if (txt_password.Text.Contains(" "))
-			{
-				args.IsValid = false;
-				passwordValid.ErrorMessage = "Password length should range between 6 and 15 and should contain alphabets,\n digits, captital letters and special characers.";
-				return;
-			}
-			if (true)
-			{
-				int count = 0;
-
-				// check digits from 0 to 9 
-				for (int i = 0; i <= 9; i++)
-				{
-
-					// to convert int to string 
-					String str1 = i.ToString();
-
-					if (txt_password.Text.Contains(str1))
-					{
-						count = 1;
-					}
-				}
-				if (count == 0)
-				{
-					args.IsValid = false;
-					passwordValid.ErrorMessage = "Password length should range between 6 and 15 and should contain alphabets,\n digits, captital letters and special characers.";
-					return;
-				}
-			}
-
-			// for special characters 
-			if (!(txt_password.Text.Contains("@") || txt_password.Text.Contains("#")
-				|| txt_password.Text.Contains("!") || txt_password.Text.Contains("~")
-				|| txt_password.Text.Contains("$") || txt_password.Text.Contains("%")
-				|| txt_password.Text.Contains("^") || txt_password.Text.Contains("&")
-				|| txt_password.Text.Contains("*") || txt_password.Text.Contains("(")
-				|| txt_password.Text.Contains(")") || txt_password.Text.Contains("-")
-				|| txt_password.Text.Contains("+") || txt_password.Text.Contains("/")
-				|| txt_password.Text.Contains(":") || txt_password.Text.Contains(".")
-				|| txt_password.Text.Contains(", ") || txt_password.Text.Contains("<")
-				|| txt_password.Text.Contains(">") || txt_password.Text.Contains("?")
-				|| txt_password.Text.Contains("|")))
-			{
-				args.IsValid = false;
-				passwordValid.ErrorMessage = "Password length should range between 6 and 15 and should contain alphabets,\n digits, captital letters and special characers.";
-				return;
-			}
-
-			if (true)
-			{
-				int count = 0;
-
-				// checking capital letters 
-				for (int i = 65; i <= 90; i++)
-				{
-
-					// type casting 
-					char c = (char)i;
-
-					String str1 = c.ToString();
-					if (txt_password.Text.Contains(str1))
-					{
-						count = 1;
-					}
-				}
-				if (count == 0)
-				{
-					args.IsValid = false;
-					passwordValid.ErrorMessage = "Password length should range between 6 and 15 and should contain alphabets,\n digits, captital letters and special characers.";
-					return;
-				}
-			}
-
-			if (true)
-			{
-				int count = 0;
-
-				// checking small letters 
-				for (int i = 90; i <= 122; i++)
-				{
-
-					// type casting 
-					char c = (char)i;
-					String str1 = c.ToString();
-
-					if (txt_password.Text.Contains(str1))
-					{
-						count = 1;
-					}
-				}
-				if (count == 0)
-				{
-					args.IsValid = false;
-					passwordValid.ErrorMessage = "Password length should range between 6 and 15 and should contain alphabets,\n digits, captital letters and special characers.";
-					return;
-				}
-			}
-
-			// if all conditions fails 
-			args.IsValid = true;
-		}
-
         protected void submitButton_Click(object sender, EventArgs e)
         {
-			Label1.Text = "Out";
+			//Label1.Text = "Out";
 			if (IsValid)
 			{
-				Label1.Text = "In";
+				
 				SqlConnection con = new SqlConnection(connstr);
-				string cmdStr = "select COUNT(*) as count from Registered";
-				SqlCommand cmd = new SqlCommand(cmdStr, con);
-				SqlDataReader reader;
-				try
+				if (modeDropDownList.SelectedItem.Text == "Student")
 				{
-					con.Open();
-					reader = cmd.ExecuteReader();
-					reader.Read();
-					Label1.Text = reader["count"].ToString();
-					string sid = "S" + (int.Parse(reader["count"].ToString()) + 100).ToString();
-					reader.Close();
-					cmd.CommandText = "Insert into Registered (Id, FullName, Email, Password, UserType)" +
-				   "Values(@Id, @FullName, @Email, @Password, @UserType)";
-					cmd.Parameters.AddWithValue("@Id", sid);
-					cmd.Parameters.AddWithValue("@FullName", txt_fullname.Text);
-					cmd.Parameters.AddWithValue("@Email", txt_emailid.Text);
-					cmd.Parameters.AddWithValue("@Password", txt_password.Text);
-					cmd.Parameters.AddWithValue("@UserType", modeDropDownList.SelectedItem.Text);
-					Label1.Text = cmd.ExecuteNonQuery().ToString();
-					Session["Name"] = txt_fullname.Text;
-
+					string cmdStr = "select COUNT(*) as count from Registered";
+					SqlCommand cmd = new SqlCommand(cmdStr, con);
+					SqlDataReader reader;
+					try
+					{
+						con.Open();
+						reader = cmd.ExecuteReader();
+						reader.Read();
+						string sid = "S" + (int.Parse(reader["count"].ToString()) + 100).ToString();
+						reader.Close();
+						cmd.CommandText = "Insert into Registered (Id, FullName, Email, Password, English, German)" +
+					   "Values(@Id, @FullName, @Email, @Password, @English, @German)";
+						cmd.Parameters.AddWithValue("@Id", sid);
+						cmd.Parameters.AddWithValue("@FullName", txt_fullname.Text);
+						cmd.Parameters.AddWithValue("@Email", txt_emailid.Text);
+						cmd.Parameters.AddWithValue("@Password", txt_password.Text);
+						cmd.Parameters.AddWithValue("@English","0");
+						cmd.Parameters.AddWithValue("@German", "0");
+						cmd.ExecuteNonQuery();
+						Session["Name"] = txt_fullname.Text;
+						Response.Redirect("StudentHomePage.aspx");
+					}
+					catch
+					{
+						Label1.Text = "This Email already exists.";
+					}
+					finally
+					{
+						con.Close();
+					}
 				}
-				catch (Exception ex)
-				{
-					Label1.Text = ex.Message;
-				}
-				finally
-				{
-					con.Close();
-					Response.Redirect("StudentHomePage.aspx");
-				}
+                else
+                {
+					//teacher
+                }
 			}
-			else
-			{
-				Label1.Text = "Not Valid";
-			} 
 		}
     }
 }

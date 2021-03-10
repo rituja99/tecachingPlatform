@@ -70,7 +70,10 @@
     <Content Include="App_Themes\Header\header.css" />
     <Content Include="App_Themes\Login\login.css" />
     <Content Include="chapterWise.aspx" />
-    <Content Include="discussionForum.aspx" />
+    <Content Include="DEdiscussionForum.aspx" />
+    <Content Include="DEpracticeTests.aspx" />
+    <Content Include="DEstudyMaterials.aspx" />
+    <Content Include="ENdiscussionForum.aspx" />
     <Content Include="english.png" />
     <Content Include="englishPage.aspx" />
     <Content Include="german.png" />
@@ -79,13 +82,13 @@
     <Content Include="Images\sign up girl.png" />
     <Content Include="Images\Logo 2.png" />
     <Content Include="LandingPage.aspx" />
-    <Content Include="practiceTests.aspx" />
+    <Content Include="ENpracticeTests.aspx" />
     <Content Include="referenceTB.aspx" />
     <Content Include="signIn.aspx" />
     <Content Include="pic.jpg" />
     <Content Include="signUp.aspx" />
     <Content Include="StudentHomePage.aspx" />
-    <Content Include="studyMaterials.aspx" />
+    <Content Include="ENstudyMaterials.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -96,12 +99,33 @@
     <Compile Include="chapterWise.aspx.designer.cs">
       <DependentUpon>chapterWise.aspx</DependentUpon>
     </Compile>
-    <Compile Include="discussionForum.aspx.cs">
-      <DependentUpon>discussionForum.aspx</DependentUpon>
+    <Compile Include="DEdiscussionForum.aspx.cs">
+      <DependentUpon>DEdiscussionForum.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="discussionForum.aspx.designer.cs">
-      <DependentUpon>discussionForum.aspx</DependentUpon>
+    <Compile Include="DEdiscussionForum.aspx.designer.cs">
+      <DependentUpon>DEdiscussionForum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DEpracticeTests.aspx.cs">
+      <DependentUpon>DEpracticeTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DEpracticeTests.aspx.designer.cs">
+      <DependentUpon>DEpracticeTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DEstudyMaterials.aspx.cs">
+      <DependentUpon>DEstudyMaterials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DEstudyMaterials.aspx.designer.cs">
+      <DependentUpon>DEstudyMaterials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ENdiscussionForum.aspx.cs">
+      <DependentUpon>ENdiscussionForum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ENdiscussionForum.aspx.designer.cs">
+      <DependentUpon>ENdiscussionForum.aspx</DependentUpon>
     </Compile>
     <Compile Include="englishPage.aspx.cs">
       <DependentUpon>englishPage.aspx</DependentUpon>
@@ -124,12 +148,12 @@
     <Compile Include="LandingPage.aspx.designer.cs">
       <DependentUpon>LandingPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="practiceTests.aspx.cs">
-      <DependentUpon>practiceTests.aspx</DependentUpon>
+    <Compile Include="ENpracticeTests.aspx.cs">
+      <DependentUpon>ENpracticeTests.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="practiceTests.aspx.designer.cs">
-      <DependentUpon>practiceTests.aspx</DependentUpon>
+    <Compile Include="ENpracticeTests.aspx.designer.cs">
+      <DependentUpon>ENpracticeTests.aspx</DependentUpon>
     </Compile>
     <Compile Include="referenceTB.aspx.cs">
       <DependentUpon>referenceTB.aspx</DependentUpon>
@@ -181,12 +205,12 @@
     <Compile Include="StudentHomePage.aspx.designer.cs">
       <DependentUpon>StudentHomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="studyMaterials.aspx.cs">
-      <DependentUpon>studyMaterials.aspx</DependentUpon>
+    <Compile Include="ENstudyMaterials.aspx.cs">
+      <DependentUpon>ENstudyMaterials.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="studyMaterials.aspx.designer.cs">
-      <DependentUpon>studyMaterials.aspx</DependentUpon>
+    <Compile Include="ENstudyMaterials.aspx.designer.cs">
+      <DependentUpon>ENstudyMaterials.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace teachingPlatform
 {
-    public partial class englishPage : System.Web.UI.Page
+    public partial class ENpracticeTests : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,7 +17,5 @@ namespace teachingPlatform
             master.HomePage.NavigateUrl = "StudentHomepage.aspx";
             master.DiscussionForum.NavigateUrl = "ENdiscussionForum.aspx";
         }
-
-       
     }
 }

@@ -20,6 +20,7 @@
         transition: 0.3s;
         width: 45%;
         height: 47px;
+        margin-left: 122px;
     }
     .auto-style2 {
         padding: 2px 16px;
@@ -31,11 +32,19 @@
         transition: 0.3s;
         width: 45%;
         height: 50px;
+        margin-left: 122px;
+    }
+    .auto-style4 {
+        width: 100%;
+        max-width: 1320px;
+        margin-left: 0px;
+        margin-right: auto;
+        padding: 2px 16px;
     }
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-</br>
+    </br>
      <div class="auto-style1" style="background-color:powderblue">
   <div class="auto-style2">
       <asp:Label ID="Label1" Font-Size="Larger" runat="server" Text="1. "/>  
@@ -46,7 +55,7 @@
 </div>
     </br>
     <div class="auto-style3" style="background-color:powderblue">
-  <div class="container">
+  <div class="auto-style4">
       <asp:Label ID="Label2" Font-Size="Larger" runat="server" Text="2. "/>  
       <asp:HyperLink ID="HyperLink2" runat="server" Text="Synonyms and Antonyms" Font-Size="Larger"
           ForeColor="#000000"

@@ -55,8 +55,10 @@
                     <div class="input-group col-lg-6 mb-4">
                       <asp:TextBox ID="txt_password" runat="server" TextMode="Password" placeholder="Password" EnableViewState="false"
                             CssClass="form-control bg-white border-left-0 border-md"></asp:TextBox>
-                    <asp:CustomValidator Display="None" ID="passwordValid" ControlToValidate="txt_password" runat="server"
-                         OnServerValidate="passwordValid_ServerValidate"></asp:CustomValidator>
+                    <asp:RegularExpressionValidator ID="passwordValidation" runat="server" ControlToValidate="txt_password"
+                        ErrorMessage="Password should contain minimum of 8 characters and \n maximum of 25 characters including digits,\n both upper case and lower case letters, and special characters" 
+                        Display="None" 
+                         ValidationExpression="^(?=.*[a-z])(?=.*[A-z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,25}$" />
                         <asp:RequiredFieldValidator ID="passwordReq" Display="None" ControlToValidate="txt_password"
                             runat="server" ErrorMessage="Please enter the password." />
                     </div>

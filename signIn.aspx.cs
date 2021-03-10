@@ -36,6 +36,7 @@ namespace teachingPlatform
                     else
                     {
                         Session["Name"] = reader["FullName"].ToString();
+                        reader.Close();
                         Response.Redirect("StudentHomePage.aspx");
                     }
                 }
@@ -45,7 +46,6 @@ namespace teachingPlatform
                 }
                 finally
                 {
-                    reader.Close();
                     con.Close();
                 }
             

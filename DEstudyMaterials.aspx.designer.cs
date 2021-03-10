@@ -11,7 +11,7 @@ namespace teachingPlatform
 {
 
 
-    public partial class studyMaterials
+    public partial class DEstudyMaterials
     {
 
         /// <summary>

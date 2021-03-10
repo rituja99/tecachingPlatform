@@ -11,7 +11,11 @@ namespace teachingPlatform
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Site1 master = (Site1)this.Master;
+            master.StudyMaterials.NavigateUrl = "DEstudyMaterials.aspx";
+            master.PracticeTests.NavigateUrl = "DEpracticeTests.aspx";
+            master.HomePage.NavigateUrl = "StudentHomepage.aspx";
+            master.DiscussionForum.NavigateUrl = "DEdiscussionForum.aspx";
         }
     }
 }

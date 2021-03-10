@@ -96,13 +96,13 @@ namespace teachingPlatform
         protected global::System.Web.UI.WebControls.TextBox txt_password;
 
         /// <summary>
-        /// passwordValid control.
+        /// passwordValidation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator passwordValid;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator passwordValidation;
 
         /// <summary>
         /// passwordReq control.
