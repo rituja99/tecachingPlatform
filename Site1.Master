@@ -29,13 +29,16 @@
                     <div class="d-flex justify-content-end collapse navbar-collapse" id="navbarTogglerDemo02" style="float:right">
                         <ul class="d-flex justify-content-end navbar-nav">
                             <li class="nav-item ">
-                              <a class="nav-link active" aria-current="page" href="StudentHomePage.aspx">Home</a>
+                              <asp:HyperLink id="homePage" runat="server"  CssClass="nav-link active"  NavigateUrl="#">Home</asp:HyperLink>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link active" href="studyMaterials.aspx" aria-current="page">Resources</a>
+                              <asp:HyperLink id="studyMaterials" runat="server" CssClass="nav-link active" NavigateUrl="#">Resources</asp:HyperLink>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link active" href="practiceTests.aspx" aria-current="page">Test</a>
+                              <asp:HyperLink id="practiceTests" runat="server" CssClass="nav-link active" NavigateUrl="#">Test</asp:HyperLink>
+                            </li>
+                             <li class="nav-item">
+                              <asp:HyperLink id="discussion" runat="server" CssClass="nav-link active" NavigateUrl="#">Q/A</asp:HyperLink>
                             </li>
                         </ul>
                     </div>

@@ -11,7 +11,7 @@ namespace teachingPlatform
 {
 
 
-    public partial class discussionForum
+    public partial class DEpracticeTests
     {
     }
 }
