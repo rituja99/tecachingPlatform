@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Header\header.css" />
+    <Content Include="App_Themes\Homepage Cards\cards.css" />
     <Content Include="App_Themes\Login\login.css" />
     <Content Include="chapterWise.aspx" />
     <Content Include="discussionForum.aspx" />
@@ -75,6 +76,8 @@
     <Content Include="englishPage.aspx" />
     <Content Include="german.png" />
     <Content Include="germanPage.aspx" />
+    <Content Include="Images\Languages\England Flag.jpg" />
+    <Content Include="Images\Languages\Germany Flag.jpg" />
     <Content Include="Images\study.png" />
     <Content Include="Images\sign up girl.png" />
     <Content Include="Images\Logo 2.png" />
@@ -86,6 +89,7 @@
     <Content Include="signUp.aspx" />
     <Content Include="StudentHomePage.aspx" />
     <Content Include="studyMaterials.aspx" />
+    <Content Include="TeacherHomePage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +191,13 @@
     </Compile>
     <Compile Include="studyMaterials.aspx.designer.cs">
       <DependentUpon>studyMaterials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherHomePage.aspx.cs">
+      <DependentUpon>TeacherHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherHomePage.aspx.designer.cs">
+      <DependentUpon>TeacherHomePage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -10,7 +10,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
     <div class="row py-5 align-items-center">
-
         <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
             <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/sign up girl.png" CssClass="img-fluid mb-3 d-none d-md-block"/>
             <h1>Sign Up to <i>Learn</i> today</h1>
@@ -21,14 +20,12 @@
             <form action="#">
                 <div class="row">
 
-                    <!-- First Name -->
                     <div class="input-group col-lg-6 mb-4">
                         <asp:TextBox ID="txt_fullname" runat="server" placeholder="Full Name" CssClass="form-control bg-white border-left-0 border-md"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="fullNameReq" runat="server" ControlToValidate="txt_fullname"
                          Display="None" ErrorMessage="Please enter your full name." />
                     </div>
 
-                    <!-- Email Address -->
                     <div class="input-group col-lg-12 mb-4">
                     <asp:TextBox ID="txt_emailid" runat="server" placeholder="Email Address" EnableViewState="false"
                         CssClass="form-control bg-white border-left-0 border-md"></asp:TextBox>
@@ -39,7 +36,6 @@
                              ValidationExpression="\S+@\S+\.\S+"/>
                     </div>
 
-                    <!-- User Type -->
                     <div class="input-group col-lg-12 mb-4">
                         <asp:DropDownList ID="modeDropDownList" runat="server" style="width:100%"
                             CssClass="custom-select form-control bg-white border-left-0 border-md h-100 font-weight-bold text-muted">
@@ -51,7 +47,6 @@
                              Display="None" ErrorMessage="Please select your user type." />
                     </div>
 
-                    <!-- Password -->
                     <div class="input-group col-lg-6 mb-4">
                       <asp:TextBox ID="txt_password" runat="server" TextMode="Password" placeholder="Password" EnableViewState="false"
                             CssClass="form-control bg-white border-left-0 border-md"></asp:TextBox>
@@ -61,8 +56,7 @@
                             runat="server" ErrorMessage="Please enter the password." />
                     </div>
                     
-                    <!-- Password Confirmation -->
-                    <div class="input-group col-lg-6 mb-4">
+                   <div class="input-group col-lg-6 mb-4">
                         <asp:TextBox ID="passwordConfirmationTextBox" runat="server" TextMode="Password"
                             placeholder="Confirm Password"
                             CssClass="form-control bg-white border-left-0 border-md"></asp:TextBox>
@@ -75,7 +69,6 @@
                             runat="server" ErrorMessage="Please re-enter your password." />
                     </div>
 
-                    <!-- Submit Button -->
                     <div class="form-group col-lg-12 mx-auto mb-0">
                         <asp:Button ID="submitButton" runat="server" Text="Create Account"
                             CssClass="btn btn-primary btn-block py-2" 
@@ -86,14 +79,12 @@
                     
                     <asp:ValidationSummary ShowMessageBox="true" ShowSummary="false" ID="ValidationSummary1"
                         runat="server" DisplayMode="BulletList" />
-                    <!-- Divider Text -->
                     <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
                         <div class="border-bottom w-100 ml-5"></div>
                         <span class="px-2 small text-muted font-weight-bold text-muted">OR</span>
                         <div class="border-bottom w-100 mr-5"></div>
                     </div>
 
-                    <!-- Already Registered -->
                     <div class="text-center w-100">
                         <p class="text-muted font-weight-bold">Already Registered? <a href="signIn.aspx" class="text-primary ml-2">Login</a></p>
                     </div>

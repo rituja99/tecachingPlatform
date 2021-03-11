@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site3.Master" AutoEventWireup="true" CodeBehind="StudentHomePage.aspx.cs" Inherits="teachingPlatform.StudentHomePage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <%--<link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">--%>
     <link href="App_Themes/Header/header.css" rel="stylesheet" />
          <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -68,7 +66,6 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
         <div class="auto-style10">
      <div class="auto-style1" style="background-color:powderblue">
   <div class="auto-style2">

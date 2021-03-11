@@ -31,7 +31,7 @@
       <asp:Label ID="Label1" Font-Size="Larger" runat="server" Text="1. "/>  
       <asp:HyperLink ID="HyperLink1" runat="server" Text="Practice Test-1" Font-Size="Larger"
           ForeColor="#000000" Font-Underline="false"
-          NavigateUrl="https://forms.office.com/Pages/ResponsePage.aspx?id=Qr2-Kf_xPUyWiAZ-NGDcH1GoZ25E7ShBk0qdRvRrjBZUN05aWTk1MzJNTEJOU0hSUjFRUTlTQlpPUS4u"/>
+          NavigateUrl="https://forms.office.com/Pages/ResponsePage.aspx?id=Qr2-Kf_xPUyWiAZ-NGDcH1GoZ25E7ShBk0qdRvRrjBZUN05aWTk1MzJNTEJOU0hSUjFRUTlTQlpPUS4u"  target="_blank"/>
       <br />
   </div>
 </div>

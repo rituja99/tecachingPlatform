@@ -5,27 +5,26 @@
 <html>
 <head runat="server">
     <title>Foreign Language Teaching Platform</title>
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 
-<body>
+<body style="font-family: 'Inter', sans-serif;">
     <form id="form1" runat="server">
         <asp:Panel ID="Panel1" runat="server">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white" style="padding:0px;">
             <div class="container-fluid">
-            <a class="navbar-brand " href="LandingPage.aspx" style="vertical-align:central;">
-                <asp:Image ID="logoImage" runat="server" CssClass="navbar-brand" ImageUrl="~/Images/Logo 2.png" Width="50%" Height="50%" style="border-style: none;" />
-            </a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="signInButton" runat="server" CssClass="btn btn-outline-primary" CausesValidation="false"
-                    PostBackUrl="~/signIn.aspx" style="border-radius:10px; position:absolute; right: 110px;" Text="Sign In" />
-                &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="signUpButton" runat="server" Text="Sign Up" CausesValidation="false"
-                CssClass="btn btn-primary" style="float: right; border-radius:10px; 
-position:absolute; right: 20px;" PostBackUrl="~/signUp.aspx"/>
+                <a class="navbar-brand " href="LandingPage.aspx" style="vertical-align:central;">
+                    <asp:Image ID="logoImage" runat="server" CssClass="navbar-brand" ImageUrl="~/Images/Logo 2.png" Width="50%" Height="50%" style="border-style: none;" />
+                </a>
+                <div class="d-flex justify-content-end navbar">
+                    <asp:Button ID="signInButton" runat="server" CssClass="btn btn-outline-primary" CausesValidation="false" PostBackUrl="~/signIn.aspx" style="border-radius:10px; " Text="Sign In" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="signUpButton" runat="server" Text="Sign Up" CausesValidation="false" CssClass="btn btn-primary" style="float: right; border-radius:10px;" PostBackUrl="~/signUp.aspx"/>
+                </div>
             </div>
         </nav>
     </asp:Panel>
