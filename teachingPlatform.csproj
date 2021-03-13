@@ -71,9 +71,15 @@
     <Content Include="App_Themes\Homepage Cards\cards.css" />
     <Content Include="App_Themes\Login\login.css" />
     <Content Include="chapterWise.aspx" />
+    <Content Include="DEdiscussionForum.aspx" />
+    <Content Include="DEpracticeTests.aspx" />
+    <Content Include="DEstudyMaterials.aspx" />
     <Content Include="discussionForum.aspx" />
+    <Content Include="ENdiscussionForum.aspx" />
     <Content Include="english.png" />
     <Content Include="englishPage.aspx" />
+    <Content Include="ENpracticeTests.aspx" />
+    <Content Include="ENstudyMaterials.aspx" />
     <Content Include="german.png" />
     <Content Include="germanPage.aspx" />
     <Content Include="Images\Languages\England Flag.jpg" />
@@ -100,6 +106,27 @@
     <Compile Include="chapterWise.aspx.designer.cs">
       <DependentUpon>chapterWise.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DEdiscussionForum.aspx.cs">
+      <DependentUpon>DEdiscussionForum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DEdiscussionForum.aspx.designer.cs">
+      <DependentUpon>DEdiscussionForum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DEpracticeTests.aspx.cs">
+      <DependentUpon>DEpracticeTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DEpracticeTests.aspx.designer.cs">
+      <DependentUpon>DEpracticeTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DEstudyMaterials.aspx.cs">
+      <DependentUpon>DEstudyMaterials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DEstudyMaterials.aspx.designer.cs">
+      <DependentUpon>DEstudyMaterials.aspx</DependentUpon>
+    </Compile>
     <Compile Include="discussionForum.aspx.cs">
       <DependentUpon>discussionForum.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -107,12 +134,33 @@
     <Compile Include="discussionForum.aspx.designer.cs">
       <DependentUpon>discussionForum.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ENdiscussionForum.aspx.cs">
+      <DependentUpon>ENdiscussionForum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ENdiscussionForum.aspx.designer.cs">
+      <DependentUpon>ENdiscussionForum.aspx</DependentUpon>
+    </Compile>
     <Compile Include="englishPage.aspx.cs">
       <DependentUpon>englishPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="englishPage.aspx.designer.cs">
       <DependentUpon>englishPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ENpracticeTests.aspx.cs">
+      <DependentUpon>ENpracticeTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ENpracticeTests.aspx.designer.cs">
+      <DependentUpon>ENpracticeTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ENstudyMaterials.aspx.cs">
+      <DependentUpon>ENstudyMaterials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ENstudyMaterials.aspx.designer.cs">
+      <DependentUpon>ENstudyMaterials.aspx</DependentUpon>
     </Compile>
     <Compile Include="germanPage.aspx.cs">
       <DependentUpon>germanPage.aspx</DependentUpon>
