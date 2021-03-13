@@ -22,5 +22,10 @@ namespace teachingPlatform
         {
 
         }
+
+        protected void postQuestion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

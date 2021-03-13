@@ -33,6 +33,15 @@ namespace teachingPlatform
         protected global::System.Web.UI.WebControls.TextBox discussTB;
 
         /// <summary>
+        /// postQuestion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button postQuestion;
+
+        /// <summary>
         /// postAnswer control.
         /// </summary>
         /// <remarks>
@@ -40,5 +49,14 @@ namespace teachingPlatform
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button postAnswer;
+
+        /// <summary>
+        /// panel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panel;
     }
 }
