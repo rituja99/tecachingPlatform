@@ -9,15 +9,13 @@
             <div style="padding-left:100px">
                 <h2 class="teacher-text">Welcome username</h2>
                 <p class="teacher-text">Add some text here about something idk</p>
-                <div class=" container text-lg-end" style="float:right; padding-right:50px">
-                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/clip-99.png" Height="25%" Width="25%" />
-                </div>
+                <%--<div style="float:right; height: 45%; width: 45%; flex-wrap: wrap; padding-right:50px">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/clip-99.png" Height="55%" Width="55%" style="float: right;" />
+                </div>--%>
                 <p class="teacher-text">More text</p>
                 <br /><br />
             </div>
         </div>
-
-        
         
         <div style="padding-left:100px; padding-top:100px;" >
             <br />
