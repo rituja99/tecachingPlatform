@@ -5,16 +5,23 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
         <div class="text-white" style="padding-top:100px; height:100%; width:100%; background-image: linear-gradient(to bottom, #1a6be4, #2870e9, #3274ee, #3c79f3, #447ef8, #4b89fb, #5493fd, #5e9dff, #71aeff, #87beff, #9fcdff, #b9dcff); box-shadow: 0px 0px 40px 40px #B6DCFF">
+           
             <div style="padding-left:100px">
                 <h2 class="teacher-text">Welcome username</h2>
                 <p class="teacher-text">Add some text here about something idk</p>
+                <div class=" container text-lg-end" style="float:right; padding-right:50px">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/clip-99.png" Height="25%" Width="25%" />
+                </div>
                 <p class="teacher-text">More text</p>
-                <br /><br /><br />
+                <br /><br />
             </div>
         </div>
-        <div style="padding:100px;" >
+
+        
+        
+        <div style="padding-left:100px; padding-top:100px;" >
             <br />
-            <h3 >Your Courses</h3>
+            <h3 class="page-content">Your Courses</h3>
             <br />
             <div class="page-content">
                 <div class="card" style="border:none">

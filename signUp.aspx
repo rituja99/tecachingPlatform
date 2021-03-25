@@ -9,7 +9,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
-    <div class="row py-5 align-items-center">
+    <div class="row py-3 align-items-center">
         <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
             <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/sign up girl.png" CssClass="img-fluid mb-3 d-none d-md-block"/>
             <h1>Sign Up to <i>Learn</i> today</h1>
