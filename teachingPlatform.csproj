@@ -267,8 +267,6 @@
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <Content Include="Site2.Master" />
-    <Content Include="Synonyms_Antonyms.pdf" />
-    <Content Include="Verbs.pdf" />
     <Content Include="Site3.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
