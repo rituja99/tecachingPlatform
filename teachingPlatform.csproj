@@ -82,10 +82,10 @@
     <Content Include="ENstudyMaterials.aspx" />
     <Content Include="german.png" />
     <Content Include="germanPage.aspx" />
-    <Content Include="Images\clip-722.png" />
-    <Content Include="Images\clip-99.png" />
-    <Content Include="Images\clip-online-consultation.png" />
-    <Content Include="Images\clip-reading-of-books-1.png" />
+    <Content Include="GermanStudyMaterialsTeacher.aspx" />
+    <Content Include="Images\laptop-clip-art.png" />
+    <Content Include="Images\videocall-person-clipart.png" />
+    <Content Include="Images\clip-reading-of-books.png" />
     <Content Include="Images\clip-schoolteacher-near-the-blackboard.png" />
     <Content Include="Images\TeacherHPClip.png" />
     <Content Include="Images\Languages\England Flag.jpg" />
@@ -173,6 +173,13 @@
     <Compile Include="germanPage.aspx.designer.cs">
       <DependentUpon>germanPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GermanStudyMaterialsTeacher.aspx.cs">
+      <DependentUpon>GermanStudyMaterialsTeacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GermanStudyMaterialsTeacher.aspx.designer.cs">
+      <DependentUpon>GermanStudyMaterialsTeacher.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LandingPage.aspx.cs">
       <DependentUpon>LandingPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -254,7 +261,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Data\resources\german\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

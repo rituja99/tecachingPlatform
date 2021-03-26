@@ -9,10 +9,10 @@ using System.Drawing;
 
 namespace teachingPlatform
 {
-    public partial class EnglishStudyMaterialsTeacher : System.Web.UI.Page
+    public partial class GermanStudyMaterialsTeacher : System.Web.UI.Page
     {
         private string serverPath;
-        private string filePath = "Data/resources/english/";
+        private string filePath = "Data/resources/german/";
         protected void Page_Load(object sender, EventArgs e)
         {
             serverPath = Server.MapPath(filePath);
@@ -22,7 +22,7 @@ namespace teachingPlatform
 
             string[] files = Directory.GetFiles(serverPath);
 
-            if (files.Length == 0)
+            if(files.Length == 0)
             {
                 Label label = new Label();
                 label.Text = "No materials uploaded";
