@@ -107,6 +107,7 @@ namespace teachingPlatform
 						TextBox1.Controls.Clear();
 						TextBox2.Controls.Clear();
 						Label1.Controls.Clear();
+						this.Page_Load(sender, e);
 					}
 				}
 				else
