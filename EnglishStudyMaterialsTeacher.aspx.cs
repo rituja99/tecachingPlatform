@@ -50,6 +50,12 @@ namespace teachingPlatform
                 Panel1.Controls.Add(new LiteralControl("<br/>"));
             }
 
+            Site1 master = (Site1)this.Master;
+            master.StudyMaterials.NavigateUrl = "EnglishStudyMaterialsTeacher.aspx";
+            master.PracticeTests.NavigateUrl = "EnglishPracticeTestsTeacher.aspx";
+            master.HomePage.NavigateUrl = "TeacherHomepage.aspx";
+            master.DiscussionForum.NavigateUrl = "DEdiscussionForum.aspx";
+
 
         }
 

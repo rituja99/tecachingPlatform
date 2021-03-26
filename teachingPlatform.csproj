@@ -77,11 +77,13 @@
     <Content Include="ENdiscussionForum.aspx" />
     <Content Include="english.png" />
     <Content Include="englishPage.aspx" />
+    <Content Include="EnglishPracticeTestsTeacher.aspx" />
     <Content Include="EnglishStudyMaterialsTeacher.aspx" />
     <Content Include="ENpracticeTests.aspx" />
     <Content Include="ENstudyMaterials.aspx" />
     <Content Include="german.png" />
     <Content Include="germanPage.aspx" />
+    <Content Include="GermanPracticeTestsTeacher.aspx" />
     <Content Include="GermanStudyMaterialsTeacher.aspx" />
     <Content Include="Images\laptop-clip-art.png" />
     <Content Include="Images\videocall-person-clipart.png" />
@@ -145,6 +147,13 @@
     <Compile Include="englishPage.aspx.designer.cs">
       <DependentUpon>englishPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EnglishPracticeTestsTeacher.aspx.cs">
+      <DependentUpon>EnglishPracticeTestsTeacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnglishPracticeTestsTeacher.aspx.designer.cs">
+      <DependentUpon>EnglishPracticeTestsTeacher.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EnglishStudyMaterialsTeacher.aspx.cs">
       <DependentUpon>EnglishStudyMaterialsTeacher.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,6 +181,13 @@
     </Compile>
     <Compile Include="germanPage.aspx.designer.cs">
       <DependentUpon>germanPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GermanPracticeTestsTeacher.aspx.cs">
+      <DependentUpon>GermanPracticeTestsTeacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GermanPracticeTestsTeacher.aspx.designer.cs">
+      <DependentUpon>GermanPracticeTestsTeacher.aspx</DependentUpon>
     </Compile>
     <Compile Include="GermanStudyMaterialsTeacher.aspx.cs">
       <DependentUpon>GermanStudyMaterialsTeacher.aspx</DependentUpon>
@@ -263,6 +279,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\resources\german\" />
+    <Folder Include="Data\tests\english\" />
+    <Folder Include="Data\tests\german\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
