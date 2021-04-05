@@ -1,0 +1,2 @@
+INSERT INTO [dbo].[PracticeTests] ([Id], [TeacherID], [Language], [Link], [TestName]) VALUES (1, 0, N'English', N'https://forms.office.com/Pages/ResponsePage.aspx?id=Qr2-Kf_xPUyWiAZ-NGDcH1GoZ25E7ShBk0qdRvRrjBZUN05aWTk1MzJNTEJOU0hSUjFRUTlTQlpPUS4u', N'Sample English Test')
+INSERT INTO [dbo].[PracticeTests] ([Id], [TeacherID], [Language], [Link], [TestName]) VALUES (2, 0, N'English', N'https://forms.office.com/Pages/ResponsePage.aspx?id=Qr2-Kf_xPUyWiAZ-NGDcH1GoZ25E7ShBk0qdRvRrjBZUN05aWTk1MzJNTEJOU0hSUjFRUTlTQlpPUS4u', N'Sample English Test')
