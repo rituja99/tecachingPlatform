@@ -16,7 +16,7 @@
             </div>
             <div class="container py-5 text-end" >
                 <h2 style="padding-top:10%">Join <i>Learn</i> Today</h2>
-                <p>Add some crap about how amazing it is etc</p>
+                <p>Learn by teaching your peers</p>
             </div>
 
         </div>
