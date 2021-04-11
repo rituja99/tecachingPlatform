@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="signUp.aspx.cs" Inherits="teachingPlatform.signUp" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="signUp.aspx.cs" Inherits="teachingPlatform.signUp"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .border-md {
@@ -17,7 +17,7 @@
         </div>
 
         <div class="col-md-7 col-lg-6 ml-auto">
-            <form action="#">
+            <%--<form action="#">--%>
                 <div class="row">
 
                     <div class="input-group col-lg-6 mb-4">
@@ -92,7 +92,7 @@
                     </div>
 
                 </div>
-            </form>
+            <%--</form>--%>
         </div>
     </div>
 </div>

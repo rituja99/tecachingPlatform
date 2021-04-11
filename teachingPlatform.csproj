@@ -277,8 +277,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\resources\german\" />
-    <Folder Include="Data\tests\english\" />
-    <Folder Include="Data\tests\german\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

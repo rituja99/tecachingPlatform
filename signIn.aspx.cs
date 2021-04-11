@@ -20,7 +20,7 @@ namespace teachingPlatform
         protected void studentSignIn_Click(object sender, EventArgs e)
         {
                 SqlConnection con = new SqlConnection(connstr);
-                string cmdStr = "select * from Registered where Email=@Email";
+                string cmdStr = "select * from Registered where Email=@Email and Id like 'S%'";
                 SqlCommand cmd = new SqlCommand(cmdStr, con);
                 cmd.Parameters.AddWithValue("@Email", emailIDTextBoxStudent.Text);
                 SqlDataReader reader = null;
@@ -53,31 +53,35 @@ namespace teachingPlatform
 
         protected void teacherSignIn_Click(object sender, EventArgs e)
         {
-                SqlConnection con = new SqlConnection(connstr);
-                string cmdStr = "select * from Registered where Email=@Email";
-                SqlCommand cmd = new SqlCommand(cmdStr, con);
-                cmd.Parameters.AddWithValue("@Email", emailIDTextBoxTeacher.Text);
-                SqlDataReader reader;
-                try
+
+            SqlConnection con = new SqlConnection(connstr);
+
+            string cmdStr = "SELECT * FROM Registered WHERE Email=@Email";
+            SqlCommand cmd = new SqlCommand(cmdStr, con);
+            cmd.Parameters.AddWithValue("@Email", emailIDTextBoxTeacher.Text);
+
+            SqlDataReader reader;
+            
+            try
+            {
+                con.Open();
+                reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader["Password"].ToString() != passwordTextBoxTeacher.Text)
                 {
-                    con.Open();
-                    reader = cmd.ExecuteReader();
-                    reader.Read();
-                    if (reader["Password"].ToString() != passwordTextBoxTeacher.Text)
-                    {
-                        WrongCredentialsTeacher.Text = "Incorrect Password.";
-                    }
-                    else
-                        Response.Redirect("TeacherHomePage.aspx");
+                    WrongCredentialsTeacher.Text = "Incorrect Password.";
                 }
-                catch
-                {
-                    WrongCredentialsTeacher.Text = "Incorrect UserName.";
-                }
-                finally
-                {
-                    con.Close();
-                }
+                else
+                    Response.Redirect("TeacherHomePage.aspx?fullName=" + Server.UrlEncode(reader["FullName"].ToString()));
+            }
+            catch
+            {
+                WrongCredentialsTeacher.Text = "Incorrect UserName.";
+            }
+            finally
+            {
+                con.Close();
+            }
             
         }
     }
