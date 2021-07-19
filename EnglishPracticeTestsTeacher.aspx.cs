@@ -20,7 +20,7 @@ namespace teachingPlatform
 			master.StudyMaterials.NavigateUrl = "EnglishStudyMaterialsTeacher.aspx";
 			master.PracticeTests.NavigateUrl = "EnglishPracticeTestsTeacher.aspx";
 			master.HomePage.NavigateUrl = "TeacherHomepage.aspx";
-			master.DiscussionForum.NavigateUrl = "DEdiscussionForum.aspx";
+			master.DiscussionForum.NavigateUrl = "ENdiscussionForum.aspx";
 
 			Panel1.Controls.Clear();
 			Panel1.Controls.Add(new LiteralControl("<br/>"));
@@ -70,7 +70,7 @@ namespace teachingPlatform
 			{
 
 				SqlConnection con = new SqlConnection(connstr);
-				if (TextBox1.Text != null && TextBox2.Text != null)
+				if (TextBox1.Text != null && TextBox2.Text != null && TextBox1.Text.StartsWith("https://forms.office.com"))
 				{
 					string cmdStr = "select COUNT(*) as count from PracticeTests";
 					SqlCommand cmd = new SqlCommand(cmdStr, con);
@@ -84,17 +84,27 @@ namespace teachingPlatform
 						int ID = int.Parse(reader["count"].ToString()) + 1;
 						reader.Close();
 
-						cmd.CommandText = "Insert into PracticeTests (Id, TeacherID, Language, Link, TestName) " +
+      //                  string connstr2 = WebConfigurationManager.ConnectionStrings["StudentsDB"].ConnectionString;
+      //                  SqlConnection con2 = new SqlConnection(connstr2);
+      //                  SqlCommand command = new SqlCommand("SELECT * FROM Registered WHERE FullName = @FullName", con2);
+      //                  command.Parameters.AddWithValue("@FullName", Session["Name"]);
+      //                  reader = command.ExecuteReader();
+      //                  reader.Read();
+      //                  String Tid = reader["Id"].ToString();
+						//reader.Close();
+
+
+                        cmd.CommandText = "Insert into PracticeTests (Id, TeacherID, Language, Link, TestName) " +
 						"Values(@Id, @TeacherID, @Language, @Link, @TestName)";
 						cmd.Parameters.AddWithValue("@Id", ID);
-						cmd.Parameters.AddWithValue("@TeacherID", ""); //fix
+						cmd.Parameters.AddWithValue("@TeacherID", "");
 						cmd.Parameters.AddWithValue("@Language", "English");
 						cmd.Parameters.AddWithValue("@Link", TextBox1.Text);
 						cmd.Parameters.AddWithValue("@TestName", TextBox2.Text);
 						cmd.ExecuteNonQuery();
 
 						Label1.Text = TextBox2.Text + " uploaded.";
-
+					
 					}
 					catch(Exception ex)
 					{
@@ -112,7 +122,7 @@ namespace teachingPlatform
 				}
 				else
 				{
-					Label1.Text = "Test link and name have to be filled";
+					Label1.Text = "Test link and name have to be filled. Only MS Forms accepted";
 				}
 			}
 		}

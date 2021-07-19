@@ -46,6 +46,7 @@ namespace teachingPlatform
 
                 newPanel.Controls.Add(hyperlink);
 
+
                 Panel1.Controls.Add(newPanel);
                 Panel1.Controls.Add(new LiteralControl("<br/>"));
             }
@@ -54,7 +55,7 @@ namespace teachingPlatform
             master.StudyMaterials.NavigateUrl = "EnglishStudyMaterialsTeacher.aspx";
             master.PracticeTests.NavigateUrl = "EnglishPracticeTestsTeacher.aspx";
             master.HomePage.NavigateUrl = "TeacherHomepage.aspx";
-            master.DiscussionForum.NavigateUrl = "DEdiscussionForum.aspx";
+            master.DiscussionForum.NavigateUrl = "ENdiscussionForum.aspx";
 
 
         }

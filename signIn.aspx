@@ -27,7 +27,7 @@
                                             Text="Sign In" CssClass="btnSubmit" OnClick="studentSignIn_Click" />
                             </div>
                             <div class="form-group">
-                                <a href="#" class="ForgetPwd">Forgot Password?</a>
+                                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="ForgetPwd" NavigateUrl="~/ForgotPassword.aspx">Forgot Password?</asp:HyperLink>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="WrongCredentialsStudent" runat="server" Text=""
@@ -56,7 +56,7 @@
                                 <asp:Button ID="signInButtonTeacher" runat="server" Text="Sign In" CssClass="btnSubmit" OnClick="teacherSignIn_Click" />
                             </div>
                             <div class="form-group">
-                                <a href="#" class="ForgetPwd">Forgot Password?</a>
+                                <asp:HyperLink ID="HyperLink2" runat="server" CssClass="ForgetPwd" NavigateUrl="~/ForgotPassword.aspx">Forgot Password?</asp:HyperLink>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="WrongCredentialsTeacher" runat="server" Text="" ForeColor="White"></asp:Label>
@@ -64,12 +64,10 @@
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </div>
-
-                <div>
-                    <br />
-                    <a href="signUp.aspx" class="ForgetPwd">Dont have an account? Sign Up</a>
-                </div>
-            
+            </div>
+            <div>
+                <br />
+                <a href="signUp.aspx" class="ForgetPwd">Dont have an account? Sign Up</a>
             </div>
         </div>
     </div>

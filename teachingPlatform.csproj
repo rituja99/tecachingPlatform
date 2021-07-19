@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="App_Themes\Header\header.css" />
     <Content Include="App_Themes\Homepage Cards\cards.css" />
+    <Content Include="App_Themes\Login\forgotPW.css" />
     <Content Include="App_Themes\Login\login.css" />
     <Content Include="chapterWise.aspx" />
     <Content Include="DEdiscussionForum.aspx" />
@@ -81,7 +82,8 @@
     <Content Include="EnglishStudyMaterialsTeacher.aspx" />
     <Content Include="ENpracticeTests.aspx" />
     <Content Include="ENstudyMaterials.aspx" />
-    <Content Include="german.png" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="Images\german.png" />
     <Content Include="germanPage.aspx" />
     <Content Include="GermanPracticeTestsTeacher.aspx" />
     <Content Include="GermanStudyMaterialsTeacher.aspx" />
@@ -97,6 +99,7 @@
     <Content Include="Images\Logo 2.png" />
     <Content Include="LandingPage.aspx" />
     <Content Include="referenceTB.aspx" />
+    <Content Include="ResetPassword.aspx" />
     <Content Include="signIn.aspx" />
     <Content Include="pic.jpg" />
     <Content Include="signUp.aspx" />
@@ -175,6 +178,13 @@
     <Compile Include="ENstudyMaterials.aspx.designer.cs">
       <DependentUpon>ENstudyMaterials.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="germanPage.aspx.cs">
       <DependentUpon>germanPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -209,6 +219,13 @@
     </Compile>
     <Compile Include="referenceTB.aspx.designer.cs">
       <DependentUpon>referenceTB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="signIn.aspx.cs">
       <DependentUpon>signIn.aspx</DependentUpon>
@@ -276,6 +293,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Data\resources\german\" />
   </ItemGroup>
   <PropertyGroup>

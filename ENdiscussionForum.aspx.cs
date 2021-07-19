@@ -39,7 +39,7 @@ namespace teachingPlatform
             }
             catch
             {
-
+                
             }
             finally
             {
@@ -71,13 +71,44 @@ namespace teachingPlatform
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            Site1 master = (Site1)this.Master;
-            master.StudyMaterials.NavigateUrl = "ENstudyMaterials.aspx";
-            master.PracticeTests.NavigateUrl = "ENpracticeTests.aspx";
-            master.HomePage.NavigateUrl = "StudentHomepage.aspx";
-            master.DiscussionForum.NavigateUrl = "ENdiscussionForum.aspx";
-            
             Fill_Page();
+
+            Site1 master = (Site1)this.Master;
+
+            SqlConnection con = new SqlConnection(connstr);
+            string query = "SELECT * FROM Registered WHERE FullName = '" + Session["Name"].ToString() + "'";//'@FullName'";
+            SqlCommand command = new SqlCommand(query, con);
+            //command.Parameters.AddWithValue("@FullName", Session["Name"].ToString());
+            SqlDataReader reader;
+            try
+            {
+                con.Open();
+                reader = command.ExecuteReader();
+                reader.Read();
+                if (reader["Id"].ToString().StartsWith("T"))
+                {
+                    master.StudyMaterials.NavigateUrl = "EnglishStudyMaterialsTeacher.aspx";
+                    master.PracticeTests.NavigateUrl = "EnglishPracticeTestsTeacher.aspx";
+                    master.HomePage.NavigateUrl = "TeacherHomepage.aspx";
+                    master.DiscussionForum.NavigateUrl = "ENdiscussionForum.aspx";
+                }
+                else
+                {
+                    master.StudyMaterials.NavigateUrl = "ENstudyMaterials.aspx";
+                    master.PracticeTests.NavigateUrl = "ENpracticeTests.aspx";
+                    master.HomePage.NavigateUrl = "StudentHomepage.aspx";
+                    master.DiscussionForum.NavigateUrl = "ENdiscussionForum.aspx";
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+            
         }
         
         protected void postAnswer_Click(object sender, EventArgs e)
@@ -127,7 +158,7 @@ namespace teachingPlatform
             }
             catch
             {
-
+                
             }
             finally
             {

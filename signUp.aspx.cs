@@ -56,7 +56,7 @@ namespace teachingPlatform
 					if (modeDropDownList.SelectedItem.Text == "Student")
 						Response.Redirect("StudentHomePage.aspx");
 					else
-						Response.Redirect("TeacherHomePage.aspx?fullName=" + Server.UrlEncode(txt_fullname.Text));
+						Response.Redirect("TeacherHomePage.aspx");//?fullName=" + Server.UrlEncode(txt_fullname.Text));
 
 				}
 				catch

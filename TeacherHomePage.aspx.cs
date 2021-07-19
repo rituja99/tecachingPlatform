@@ -11,14 +11,14 @@ namespace teachingPlatform
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["fullName"] == null)
-            {
-                string fullName = Request.QueryString["fullName"];
-                Session["fullName"] = fullName;
-            }
+            //if(Session["fullName"] == null)
+            //{
+            //    string fullName = Request.QueryString["fullName"];
+            //    Session["fullName"] = fullName;
+            //}
             
             
-            TeacherName.Text = Session["fullName"].ToString();
+            TeacherName.Text = Session["Name"].ToString();
 
 
         }

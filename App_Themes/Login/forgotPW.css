@@ -1,0 +1,46 @@
+﻿html, body {
+    height: 100%;
+}
+
+.reset-body {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgba(102,153,204, 0.2);
+    padding:2%;
+}
+
+.reset-form {
+    padding-top: 10px;
+    font-size: 16px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.card-title {
+    color: #333;
+}
+
+.btn {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.login-form {
+    width: 320px;
+    margin: 20px;
+}
+
+span {
+    font-size: 16px;
+}
+
+.form-group{
+    text-align: left;
+}

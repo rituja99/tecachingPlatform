@@ -51,6 +51,15 @@ namespace teachingPlatform
         protected global::System.Web.UI.WebControls.Button signInButtonStudent;
 
         /// <summary>
+        /// HyperLink1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+
+        /// <summary>
         /// WrongCredentialsStudent control.
         /// </summary>
         /// <remarks>
@@ -94,6 +103,15 @@ namespace teachingPlatform
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button signInButtonTeacher;
+
+        /// <summary>
+        /// HyperLink2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
 
         /// <summary>
         /// WrongCredentialsTeacher control.

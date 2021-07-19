@@ -34,5 +34,6 @@ position:absolute; right: 198px; top: 359px; width: 100px; height: 29px;"
 position:absolute; right: 74px; top: 359px; width: 100px; height: 29px;"
         OnClick="postAnswer_Click" />
         <asp:Panel ID="panel" runat="server" CssClass="auto-style3" Height="49px" Width="452px" />
+        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
   </div>  
 </asp:Content>

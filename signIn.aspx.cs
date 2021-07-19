@@ -72,7 +72,11 @@ namespace teachingPlatform
                     WrongCredentialsTeacher.Text = "Incorrect Password.";
                 }
                 else
-                    Response.Redirect("TeacherHomePage.aspx?fullName=" + Server.UrlEncode(reader["FullName"].ToString()));
+                {
+                    Session["Name"] = reader["FullName"].ToString();
+                    reader.Close();
+                    Response.Redirect("TeacherHomePage.aspx");//?fullName=" + Server.UrlEncode(reader["FullName"].ToString()));
+                }
             }
             catch
             {

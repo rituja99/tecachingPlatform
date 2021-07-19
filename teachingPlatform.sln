@@ -5,10 +5,16 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "teachingPlatform", "teachingPlatform.csproj", "{AFC4E954-15DB-43D1-AC37-CD6B9FF7273D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49F2C4DC-02FE-4B96-B361-32E4D776F4A4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB Config", "DB Config", "{49F2C4DC-02FE-4B96-B361-32E4D776F4A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schema", "Schema", "{BDB46C57-9857-41C3-9762-CCB428194265}"
+	ProjectSection(SolutionItems) = preProject
+		dbo.PracticeTests.sql = dbo.PracticeTests.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{0B766218-0023-4D42-979F-EA4EC22255D3}"
 	ProjectSection(SolutionItems) = preProject
 		dbo.PracticeTests.data.sql = dbo.PracticeTests.data.sql
-		dbo.PracticeTests.sql = dbo.PracticeTests.sql
 	EndProjectSection
 EndProject
 Global
@@ -24,6 +30,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BDB46C57-9857-41C3-9762-CCB428194265} = {49F2C4DC-02FE-4B96-B361-32E4D776F4A4}
+		{0B766218-0023-4D42-979F-EA4EC22255D3} = {49F2C4DC-02FE-4B96-B361-32E4D776F4A4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {162578AE-94B6-4D28-83D3-5A5805031264}
