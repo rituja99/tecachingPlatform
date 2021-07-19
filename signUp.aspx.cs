@@ -8,6 +8,7 @@ using System.Web.Configuration;
 using System.Data.SqlClient;
 using System.Net.Mail;
 using System.Net;
+using System.Text;
 
 namespace teachingPlatform
 {
@@ -43,12 +44,12 @@ namespace teachingPlatform
 						id = "T" + (int.Parse(reader["count"].ToString()) + 100).ToString();
 
 					reader.Close();
-
+					string passwordEncrypted = encryptpass(txt_password.Text);
 					cmd.CommandText = "Insert into Registered (Id, FullName, Email, Password, English, German) Values(@Id, @FullName, @Email, @Password, @English, @German)";
 					cmd.Parameters.AddWithValue("@Id", id);
 					cmd.Parameters.AddWithValue("@FullName", txt_fullname.Text);
 					cmd.Parameters.AddWithValue("@Email", txt_emailid.Text);
-					cmd.Parameters.AddWithValue("@Password", txt_password.Text);
+					cmd.Parameters.AddWithValue("@Password", passwordEncrypted);
 					cmd.Parameters.AddWithValue("@English", "0");
 					cmd.Parameters.AddWithValue("@German", "0");
 					cmd.ExecuteNonQuery();
@@ -68,6 +69,12 @@ namespace teachingPlatform
 				}
 			}
 		}
-	
-    }
+		public string encryptpass(string password)
+		{
+			byte[] passBytes = System.Text.Encoding.Unicode.GetBytes(password);
+			string encryptPassword = Convert.ToBase64String(passBytes);
+			return encryptPassword;
+		}
+
+	}
 }

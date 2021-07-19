@@ -17,7 +17,7 @@ namespace teachingPlatform
             {
 				MailMessage mm = new MailMessage("teamLearn12@gmail.com", Session["Email"].ToString().Trim());
 				mm.Subject = "Email Verification";
-				mm.Body = string.Format("Hi {0},<br /><br />Verification completed. Please click on the below link to login.<br /><br /><a href=\"https://localhost:44308/signIn.aspx\">Reset</a> <br />Thank You,<br />Team Learn", Session["Name"].ToString());
+				mm.Body = string.Format("Hi {0},<br /><br />Verification completed. Please click on the below link to login.<br /><br /><a href=\"https://localhost:44308/signIn.aspx\">signIn</a> <br />Thank You,<br />Team Learn", Session["Name"].ToString());
 				mm.IsBodyHtml = true;
 				SmtpClient smtp = new SmtpClient();
 				smtp.Host = "smtp.gmail.com";

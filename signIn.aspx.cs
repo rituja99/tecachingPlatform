@@ -29,7 +29,8 @@ namespace teachingPlatform
                     con.Open();
                     reader = cmd.ExecuteReader();
                     reader.Read();
-                    if (reader["Password"].ToString() != passwordTextBoxStudent.Text)
+                    string passwordDecrypt = DecryptPassword(reader["Password"].ToString());
+                    if (passwordDecrypt != passwordTextBoxStudent.Text)
                     {
                         WrongCredentialsStudent.Text = "Incorrect Password.";
                     }
@@ -51,6 +52,7 @@ namespace teachingPlatform
             
         }
 
+        
         protected void teacherSignIn_Click(object sender, EventArgs e)
         {
 
@@ -67,7 +69,8 @@ namespace teachingPlatform
                 con.Open();
                 reader = cmd.ExecuteReader();
                 reader.Read();
-                if (reader["Password"].ToString() != passwordTextBoxTeacher.Text)
+                string passwordDecrypt = DecryptPassword(reader["Password"].ToString());
+                if (passwordDecrypt != passwordTextBoxTeacher.Text)
                 {
                     WrongCredentialsTeacher.Text = "Incorrect Password.";
                 }
@@ -87,6 +90,12 @@ namespace teachingPlatform
                 con.Close();
             }
             
+        }
+        public string DecryptPassword(string encryptedPassword)
+        {
+            byte[] passByteData = Convert.FromBase64String(encryptedPassword);
+            string originalPassword = System.Text.Encoding.Unicode.GetString(passByteData);
+            return originalPassword;
         }
     }
 }
