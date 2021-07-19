@@ -89,6 +89,7 @@
     <Content Include="DEdiscussionForum.aspx" />
     <Content Include="DEpracticeTests.aspx" />
     <Content Include="DEstudyMaterials.aspx" />
+    <Content Include="EmailVerification.aspx" />
     <Content Include="ENdiscussionForum.aspx" />
     <Content Include="english.png" />
     <Content Include="englishPage.aspx" />
@@ -149,6 +150,13 @@
     </Compile>
     <Compile Include="DEstudyMaterials.aspx.designer.cs">
       <DependentUpon>DEstudyMaterials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailVerification.aspx.cs">
+      <DependentUpon>EmailVerification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailVerification.aspx.designer.cs">
+      <DependentUpon>EmailVerification.aspx</DependentUpon>
     </Compile>
     <Compile Include="ENdiscussionForum.aspx.cs">
       <DependentUpon>ENdiscussionForum.aspx</DependentUpon>

@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Configuration;
 using System.Data.SqlClient;
+using System.Net.Mail;
+using System.Net;
 
 namespace teachingPlatform
 {
@@ -52,11 +54,8 @@ namespace teachingPlatform
 					cmd.ExecuteNonQuery();
 
 					Session["Name"] = txt_fullname.Text;
-
-					if (modeDropDownList.SelectedItem.Text == "Student")
-						Response.Redirect("StudentHomePage.aspx");
-					else
-						Response.Redirect("TeacherHomePage.aspx");//?fullName=" + Server.UrlEncode(txt_fullname.Text));
+					Session["Email"] = txt_emailid.Text;
+					Response.Redirect("EmailVerification.aspx");
 
 				}
 				catch
@@ -69,5 +68,6 @@ namespace teachingPlatform
 				}
 			}
 		}
+	
     }
 }
