@@ -35,7 +35,7 @@ namespace teachingPlatform
                     con.Open();
                     cmd.ExecuteNonQuery();
                 }
-                catch
+                finally
                 {
                     con.Close();
                     Label3.Text = "Password successfully reset. Please Login again";
