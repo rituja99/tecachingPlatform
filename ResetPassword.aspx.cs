@@ -35,6 +35,10 @@ namespace teachingPlatform
                     con.Open();
                     cmd.ExecuteNonQuery();
                 }
+                catch
+                {
+                    
+                }
                 finally
                 {
                     con.Close();
