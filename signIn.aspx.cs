@@ -58,7 +58,7 @@ namespace teachingPlatform
 
             SqlConnection con = new SqlConnection(connstr);
 
-            string cmdStr = "SELECT * FROM Registered WHERE Email=@Email";
+            string cmdStr = "SELECT * FROM Registered WHERE Email=@Email and Id like 'T%'";
             SqlCommand cmd = new SqlCommand(cmdStr, con);
             cmd.Parameters.AddWithValue("@Email", emailIDTextBoxTeacher.Text);
 
