@@ -37,7 +37,7 @@ namespace teachingPlatform
                 }
                 catch
                 {
-                    
+
                 }
                 finally
                 {
@@ -57,9 +57,5 @@ namespace teachingPlatform
             return encryptPassword;
         }
     }
-<<<<<<< HEAD
+
 }
-=======
-   
-}
->>>>>>> a883f89... added otp and check if email already exists
