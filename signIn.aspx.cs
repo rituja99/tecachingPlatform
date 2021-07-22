@@ -20,7 +20,7 @@ namespace teachingPlatform
         protected void studentSignIn_Click(object sender, EventArgs e)
         {
                 SqlConnection con = new SqlConnection(connstr);
-                string cmdStr = "select * from Registered where Email=@Email and Id like 'S%'";
+                string cmdStr = "select * from Registered where Email=@Email";
                 SqlCommand cmd = new SqlCommand(cmdStr, con);
                 cmd.Parameters.AddWithValue("@Email", emailIDTextBoxStudent.Text);
                 SqlDataReader reader = null;

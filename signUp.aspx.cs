@@ -17,6 +17,7 @@ namespace teachingPlatform
 		string connstr = WebConfigurationManager.ConnectionStrings["StudentsDB"].ConnectionString;
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			Label1.Text = "";
 
 		}
 
@@ -29,20 +30,35 @@ namespace teachingPlatform
 
 				string cmdStr = "select COUNT(*) as count from Registered";
 				SqlCommand cmd = new SqlCommand(cmdStr, con);
-				SqlDataReader reader;
+				SqlDataReader reader=null;
+				string id="";
 
-                try
+				try
                 {
 					con.Open();
 					reader = cmd.ExecuteReader();
 					reader.Read();
 
-					string id;
+					
 					if(modeDropDownList.SelectedItem.Text == "Student")
 						id = "S" + (int.Parse(reader["count"].ToString()) + 100).ToString();
 					else
 						id = "T" + (int.Parse(reader["count"].ToString()) + 100).ToString();
 
+					reader.Close();
+					cmd.CommandText = "Select Email from Registered where Email=@Email1";
+					cmd.Parameters.AddWithValue("@Email1", txt_emailid.Text);
+					reader = cmd.ExecuteReader();
+					reader.Read();
+					if ((reader["Email"].ToString() != "") || (reader["Email"] != null))
+					{
+						Label1.Text = "This Email already exists.";
+						reader.Close();
+					}
+
+				}
+				catch(Exception ex)
+				{
 					reader.Close();
 					string passwordEncrypted = encryptpass(txt_password.Text);
 					cmd.CommandText = "Insert into Registered (Id, FullName, Email, Password, English, German) Values(@Id, @FullName, @Email, @Password, @English, @German)";
@@ -53,15 +69,9 @@ namespace teachingPlatform
 					cmd.Parameters.AddWithValue("@English", "0");
 					cmd.Parameters.AddWithValue("@German", "0");
 					cmd.ExecuteNonQuery();
-
 					Session["Name"] = txt_fullname.Text;
 					Session["Email"] = txt_emailid.Text;
 					Response.Redirect("EmailVerification.aspx");
-
-				}
-				catch
-				{
-					Label1.Text = "This Email already exists.";
 				}
 				finally
 				{

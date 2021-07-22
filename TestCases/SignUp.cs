@@ -27,7 +27,7 @@ namespace teachingPlatform
             element = driver.FindElement(By.XPath("//*[@id='ContentPlaceHolder1_passwordConfirmationTextBox']"));
             element.SendKeys("Rubyjames@12");
             driver.FindElement(By.XPath("//*[@id='ContentPlaceHolder1_submitButton']")).Click();
-            driver.Close();
+            
 
         }
     }

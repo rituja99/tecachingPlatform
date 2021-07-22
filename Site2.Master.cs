@@ -9,6 +9,29 @@ namespace teachingPlatform
 {
     public partial class Site2 : System.Web.UI.MasterPage
     {
+        public Button SignUp
+        {
+            set
+            {
+                signUpButton.Visible = value.Visible;
+            }
+            get
+            {
+                return signUpButton;
+            }
+        }
+
+        public Button SignIn
+        {
+            set
+            {
+                signInButton.Visible = value.Visible;
+            }
+            get
+            {
+                return signInButton;
+            }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
 

@@ -29,8 +29,8 @@ namespace teachingPlatform
                 try
                 {
                     SqlCommand cmd = new SqlCommand("update Registered set Password = @Password where Email = @Email", con);
-
-                    cmd.Parameters.AddWithValue("@Password", newPassword2);
+                    string encryptedPassword = encryptedpassword(newPassword2);
+                    cmd.Parameters.AddWithValue("@Password", encryptedPassword);
                     cmd.Parameters.AddWithValue("@Email", email);
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -50,5 +50,16 @@ namespace teachingPlatform
                 Label3.Text = "The two passwords do not match. Please try again.";
             }
         }
+        public string encryptedpassword(string password)
+        {
+            byte[] passBytes = System.Text.Encoding.Unicode.GetBytes(password);
+            string encryptPassword = Convert.ToBase64String(passBytes);
+            return encryptPassword;
+        }
     }
+<<<<<<< HEAD
 }
+=======
+   
+}
+>>>>>>> a883f89... added otp and check if email already exists
