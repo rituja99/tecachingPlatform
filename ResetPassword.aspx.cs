@@ -29,7 +29,7 @@ namespace teachingPlatform
                 try
                 {
                     SqlCommand cmd = new SqlCommand("update Registered set Password = @Password where Email = @Email", con);
-                    string encryptedPassword = encryptedpassword(newPassword2);
+                    string encryptedPassword = EncryptionDecryption.Encrypt(newPassword2);
                     cmd.Parameters.AddWithValue("@Password", encryptedPassword);
                     cmd.Parameters.AddWithValue("@Email", email);
                     con.Open();
@@ -49,12 +49,6 @@ namespace teachingPlatform
             {
                 Label3.Text = "The two passwords do not match. Please try again.";
             }
-        }
-        public string encryptedpassword(string password)
-        {
-            byte[] passBytes = System.Text.Encoding.Unicode.GetBytes(password);
-            string encryptPassword = Convert.ToBase64String(passBytes);
-            return encryptPassword;
         }
     }
 
