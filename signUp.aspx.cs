@@ -60,7 +60,7 @@ namespace teachingPlatform
 				catch(Exception ex)
 				{
 					reader.Close();
-					string passwordEncrypted = encryptpass(txt_password.Text);
+					string passwordEncrypted = EncryptionDecryption.Encrypt(txt_password.Text);
 					cmd.CommandText = "Insert into Registered (Id, FullName, Email, Password, English, German) Values(@Id, @FullName, @Email, @Password, @English, @German)";
 					cmd.Parameters.AddWithValue("@Id", id);
 					cmd.Parameters.AddWithValue("@FullName", txt_fullname.Text);
@@ -78,12 +78,6 @@ namespace teachingPlatform
 					con.Close();
 				}
 			}
-		}
-		public string encryptpass(string password)
-		{
-			byte[] passBytes = System.Text.Encoding.Unicode.GetBytes(password);
-			string encryptPassword = Convert.ToBase64String(passBytes);
-			return encryptPassword;
 		}
 
 	}

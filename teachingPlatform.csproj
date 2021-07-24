@@ -158,6 +158,7 @@
     <Compile Include="EmailVerification.aspx.designer.cs">
       <DependentUpon>EmailVerification.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EncyptionDecryption.cs" />
     <Compile Include="ENdiscussionForum.aspx.cs">
       <DependentUpon>ENdiscussionForum.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
